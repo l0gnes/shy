@@ -4,7 +4,7 @@ from disnake.enums import ActivityType
 from disnake.ext import commands
 from datetime import datetime
 from textwrap import dedent
-from .database import DatabaseHandler
+#from .database import DatabaseHandler
 from .contextHandler import ShyContext
 
 class shyDiscordBot(commands.AutoShardedInteractionBot):
@@ -37,7 +37,9 @@ class shyDiscordBot(commands.AutoShardedInteractionBot):
 
         self.add_listener(self.shyStartupMessage, name="on_ready")
         self.add_listener(self.commandCounting, name="on_slash_command")
-        self.db = self.loop.run_until_complete(DatabaseHandler.init_database())
+
+        # TODO(boopdev): Implement Prisma instead 
+        #self.db = self.loop.run_until_complete(DatabaseHandler.init_database())
 
         self.loadStartupCogs()
 
