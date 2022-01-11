@@ -6,12 +6,10 @@ import aiohttp
 
 togetherIds = {
     "Watch Together": "880218394199220334", 
-    #"youtubedev": "880218832743055411", 
     "Poker Night": "755827207812677713",
     "Betrayal.io": "773336526917861400",
     "Fishington.io": "814288819477020702",
-    "Chess in the Park": "832012774040141894",
-    #"chessdev": "832012586023256104", 
+    "Chess in the Park": "832012774040141894", 
     "Letter Tile": "879863686565621790", 
     "Word Snacks": "879863976006127627", 
     "Doodle Crew": "878067389634314250", 
