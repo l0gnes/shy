@@ -14,7 +14,8 @@ class shyDiscordBot(commands.AutoShardedInteractionBot):
         "cogs.together",
         "cogs.info",
         "cogs.development",
-        "cogs.serverutils"
+        "cogs.serverutils",
+        "cogs.devtools"
     )
 
     COMMANDS_EXECUTED = 0
@@ -50,9 +51,6 @@ class shyDiscordBot(commands.AutoShardedInteractionBot):
                 "applications.commands"
             ]
         )
-
-    async def get_context(self, message, *, cls=None):
-        return await super().get_context(message, cls=cls or ShyContext)
 
     def loadStartupCogs(self):
         for ext in self.AUTOLOAD_COGS:
