@@ -5,7 +5,6 @@ from disnake.ext import commands
 from datetime import datetime
 from textwrap import dedent
 #from .database import DatabaseHandler
-from .contextHandler import ShyContext
 
 class shyDiscordBot(commands.AutoShardedInteractionBot):
 
