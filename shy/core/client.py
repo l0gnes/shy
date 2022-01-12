@@ -51,9 +51,6 @@ class shyDiscordBot(commands.AutoShardedInteractionBot):
             ]
         )
 
-    async def get_context(self, message, *, cls=None):
-        return await super().get_context(message, cls=cls or ShyContext)
-
     def loadStartupCogs(self):
         for ext in self.AUTOLOAD_COGS:
             try:
