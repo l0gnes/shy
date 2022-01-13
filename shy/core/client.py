@@ -30,7 +30,8 @@ class shyDiscordBot(commands.AutoShardedInteractionBot):
                 type = ActivityType.watching,
             ),
             test_guilds=[
-                917316133714010132
+                917316133714010132,
+                930635406196748368
             ],
             *args, **kwargs
         )
@@ -92,6 +93,7 @@ class shyDiscordBot(commands.AutoShardedInteractionBot):
                 """
             )
         )
+        print(self.BOT_INVITE_URL)
 
     async def commandCounting(self, cmd):
         self.COMMANDS_EXECUTED += 1
