@@ -8,7 +8,7 @@ class ShyNekosAPI(object):
     NEKOS_BASEURL = "https://nekos.life/api/v2" # The base url to be used when making nekos.api requests
 
     @staticmethod
-    def __prep_endpoint(endpoint):
+    def __prep_endpoint(endpoint) -> str:
         return ShyNekosAPI.NEKOS_BASEURL + "/" + endpoint
 
     @staticmethod
@@ -20,7 +20,12 @@ class ShyNekosAPI(object):
         return request["url"]
 
     @staticmethod
-    async def pat():
+    async def pat() -> str:
+        """Returns a random image representing patting.
+
+        :return: The image url
+        :rtype: str
+        """
         return await ShyNekosAPI.__do_request(
             ShyNekosAPI.__prep_endpoint(
                 "img/pat"
@@ -28,7 +33,12 @@ class ShyNekosAPI(object):
         )
 
     @staticmethod
-    async def hug():
+    async def hug() -> str:
+        """Returns a random image representing hugging.
+
+        :return: The image url
+        :rtype: str
+        """
         return await ShyNekosAPI.__do_request(
             ShyNekosAPI.__prep_endpoint(
                 "img/hug"
@@ -36,7 +46,12 @@ class ShyNekosAPI(object):
         )
 
     @staticmethod
-    async def tickle():
+    async def tickle() -> str:
+        """Returns a random image representing tickling.
+
+        :return: The image url
+        :rtype: str
+        """
         return await ShyNekosAPI.__do_request(
             ShyNekosAPI.__prep_endpoint(
                 "img/tickle"
@@ -44,7 +59,12 @@ class ShyNekosAPI(object):
         )
 
     @staticmethod
-    async def poke():
+    async def poke() -> str:
+        """Returns a random image representing poking.
+
+        :return: The image url
+        :rtype: str
+        """
         return await ShyNekosAPI.__do_request(
             ShyNekosAPI.__prep_endpoint(
                 "img/poke"
@@ -52,7 +72,12 @@ class ShyNekosAPI(object):
         )
 
     @staticmethod
-    async def feed():
+    async def feed() -> str:
+        """Returns a random image representing feeding.
+
+        :return: The image url
+        :rtype: str
+        """
         return await ShyNekosAPI.__do_request(
             ShyNekosAPI.__prep_endpoint(
                 "img/feed"
@@ -60,7 +85,12 @@ class ShyNekosAPI(object):
         )
 
     @staticmethod
-    async def cuddle():
+    async def cuddle() -> str:                              # No idea if this is synonymous with "hugging"
+        """Returns a random image representing cuddling.
+
+        :return: The image url
+        :rtype: str
+        """
         return await ShyNekosAPI.__do_request(
             ShyNekosAPI.__prep_endpoint(
                 "img/cuddle"
@@ -68,7 +98,12 @@ class ShyNekosAPI(object):
         )
 
     @staticmethod
-    async def kiss():
+    async def kiss() -> str:
+        """Returns a random image representing kissing.
+
+        :return: The image url
+        :rtype: str
+        """
         return await ShyNekosAPI.__do_request(
             ShyNekosAPI.__prep_endpoint(
                 "img/kiss"
