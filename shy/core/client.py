@@ -15,7 +15,8 @@ class shyDiscordBot(commands.AutoShardedInteractionBot):
         "cogs.info",
         "cogs.development",
         "cogs.serverutils",
-        "cogs.devtools"
+        "cogs.devtools",
+        "cogs.fun"
     )
 
     COMMANDS_EXECUTED = 0
